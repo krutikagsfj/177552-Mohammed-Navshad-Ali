@@ -1,0 +1,33 @@
+<div class="col-md-12">
+<div style="padding:200px;">
+
+  
+  <div class="play-list" *ngIf="playList">
+   
+      <h3>Welcome to Game City! Your Card Balance Amount is {{amount}}</h3>
+   
+   
+    <div class="jumbotron">
+
+     
+
+      <table style="text-align:center;" *ngFor='let game of playList'>
+
+        <tbody>
+  <tr>
+
+    <td>{{game.game_name}}</td>
+  <td >{{game.game_price}}</td>
+
+  <td ><a (click)="playGame(game)">PlayNow</a></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+</div>
